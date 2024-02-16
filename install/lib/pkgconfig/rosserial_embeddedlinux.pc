@@ -1,4 +1,4 @@
-prefix=/home/mosa/catkin_ws/install
+prefix=/home/mosa/IELEG2111-Raspberry/install
 
 Name: rosserial_embeddedlinux
 Description: Description of rosserial_embeddedlinux

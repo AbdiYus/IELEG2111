@@ -67,14 +67,14 @@ set(rosserial_server_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rosserial_server_SOURCE_PREFIX /home/mosa/catkin_ws/src/rosserial/rosserial_server)
-  set(rosserial_server_DEVEL_PREFIX /home/mosa/catkin_ws/devel)
+  set(rosserial_server_SOURCE_PREFIX /home/mosa/IELEG2111-Raspberry/src/rosserial/rosserial_server)
+  set(rosserial_server_DEVEL_PREFIX /home/mosa/IELEG2111-Raspberry/devel)
   set(rosserial_server_INSTALL_PREFIX "")
   set(rosserial_server_PREFIX ${rosserial_server_DEVEL_PREFIX})
 else()
   set(rosserial_server_SOURCE_PREFIX "")
   set(rosserial_server_DEVEL_PREFIX "")
-  set(rosserial_server_INSTALL_PREFIX /home/mosa/catkin_ws/install)
+  set(rosserial_server_INSTALL_PREFIX /home/mosa/IELEG2111-Raspberry/install)
   set(rosserial_server_PREFIX ${rosserial_server_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rosserial_server_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/mosa/catkin_ws/src/rosserial/rosserial_server/include " STREQUAL " ")
+if(NOT "/home/mosa/IELEG2111-Raspberry/src/rosserial/rosserial_server/include " STREQUAL " ")
   set(rosserial_server_INCLUDE_DIRS "")
-  set(_include_dirs "/home/mosa/catkin_ws/src/rosserial/rosserial_server/include")
+  set(_include_dirs "/home/mosa/IELEG2111-Raspberry/src/rosserial/rosserial_server/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/mosa/catkin_ws/src/rosserial/rosserial_server/include " STREQUAL "
         message(FATAL_ERROR "Project 'rosserial_server' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rosserial_server' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/mosa/catkin_ws/src/rosserial/rosserial_server/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rosserial_server' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/mosa/IELEG2111-Raspberry/src/rosserial/rosserial_server/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rosserial_server_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mosa/catkin_ws/devel/lib;/home/mosa/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/mosa/IELEG2111-Raspberry/devel/lib;/home/mosa/IELEG2111-Raspberry/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
